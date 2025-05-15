@@ -1,0 +1,72 @@
+# _config.yml for MobiMAd GitHub Pages site
+
+# Site settings
+title: "MobiMAd"
+description: "Inovações em saúde digital para melhorar a adesão à medicação"
+url: "https://mobimadpt.com"  
+baseurl: ""  # Se o site estiver em /, mantenha vazio; caso contrário, defina /nome-do-repo
+
+# Build settings
+theme: minima  # Pode trocar para outro tema Jekyll compatível
+plugins:
+  - jekyll-feed        # Feed RSS
+  - jekyll-seo-tag     # SEO meta tags
+  - jekyll-sitemap     # Sitemap.xml
+  - jekyll-paginate    # Paginação de blog
+  - jekyll-archives    # Arquivos por categoria e tag
+  - jekyll-netlify-form # Formulários via Netlify
+
+# Pagination
+gems: [jekyll-paginate]
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+  events:
+    output: true
+    permalink: /events/:path/
+
+# Defaults for pages and posts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: "events"
+      type: "events"
+    values:
+      layout: "event"
+
+# Markdown and kramdown
+disable_highlighter: false
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter_opts:
+    line_numbers: true
+
+# Permalinks
+permalink: /:categories/:title/
+
+# Exclude files/folders
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+
+# Google Analytics (opcional)
+google_analytics: "UA-XXXXXXXX-X"
+
+# Netlify form settings
+disable_netlify_forms: false
+
+# Author info (opcional)
+author:
+  name: "Equipa MobiMAd@PT"
+  email: "p5731@ulusofona.pt"
