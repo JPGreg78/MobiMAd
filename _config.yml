@@ -3,7 +3,7 @@
 # Site settings
 title: "MobiMAd"
 description: "Inovações em saúde digital para melhorar a adesão à medicação"
-url: "https://mobimadpt.com"  
+url: "https://jpgreg78.github.io/MobiMAd/"  
 baseurl: ""  # Se o site estiver em /, mantenha vazio; caso contrário, defina /nome-do-repo
 
 # Build settings
